@@ -1,7 +1,7 @@
 package com.devsuperior.dschallenge.services;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,5 +22,12 @@ public class ClientService {
 	public List<ClientDTO> findAll() {
 		List<Client> list = repository.findAll();	
 		return list.stream().map(cls -> new ClientDTO(cls)).collect(Collectors.toList());
+	}
+
+	@Transactional(readOnly = true)
+	public ClientDTO findById(Long id) {
+		Optional<Client> obj = repository.findById(id);
+		Client entity = obj.get();
+		return new ClientDTO(entity);
 	}
 }
