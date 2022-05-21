@@ -103,11 +103,5 @@ public class Client implements Serializable{
 			return false;
 		Client other = (Client) obj;
 		return Objects.equals(id, other.id);
-	}
-	
-	
-	
-	
-	
-
+	}	
 }
