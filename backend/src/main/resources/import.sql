@@ -1,0 +1,12 @@
+INSERT INTO tb_client (name, income, cpf, children, birth_date) VALUES ('Matheus White', 5200.0, '001.111.222-21', 0, TIMESTAMP WITH TIME ZONE '1997-09-15T19:30:07.12345Z');
+INSERT INTO tb_client (name, income, cpf, children, birth_date) VALUES ('Pedro Green', 3200.0, '002.111.222-21', 3, TIMESTAMP WITH TIME ZONE '1990-07-23T09:45:07.12345Z');
+INSERT INTO tb_client (name, income, cpf, children, birth_date) VALUES ('Julia Gray', 7200.0, '003.111.222-21', 2, TIMESTAMP WITH TIME ZONE '1993-05-03T03:20:07.12345Z');
+INSERT INTO tb_client (name, income, cpf, children, birth_date) VALUES ('Ana Brown', 4200.0, '004.111.222-21', 5, TIMESTAMP WITH TIME ZONE '1965-02-23T01:53:07.12345Z');
+INSERT INTO tb_client (name, income, cpf, children, birth_date) VALUES ('Bianca Red', 3100.0, '005.111.222-21', 0, TIMESTAMP WITH TIME ZONE '1997-12-31T10:59:07.12345Z');
+INSERT INTO tb_client (name, income, cpf, children, birth_date) VALUES ('Pedro Green', 9200.0, '006.111.222-21', 1, TIMESTAMP WITH TIME ZONE '1990-11-12T00:10:07.12345Z');
+INSERT INTO tb_client (name, income, cpf, children, birth_date) VALUES ('James Silva', 1200.0, '007.111.222-21', 3, TIMESTAMP WITH TIME ZONE '1991-09-11T00:08:03.12345Z');
+INSERT INTO tb_client (name, income, cpf, children, birth_date) VALUES ('Joaquim Green', 17200.0, '008.111.222-21', 0, TIMESTAMP WITH TIME ZONE '1975-10-22T00:00:04.12345Z');
+INSERT INTO tb_client (name, income, cpf, children, birth_date) VALUES ('Maria Santos', 1295.0, '009.111.222-21', 8, TIMESTAMP WITH TIME ZONE '2020-11-13T00:14:04.12345Z');
+INSERT INTO tb_client (name, income, cpf, children, birth_date) VALUES ('Anna Clara ', 1910.0, '010.111.222-21', 4, TIMESTAMP WITH TIME ZONE '2007-11-14T00:13:01.12345Z');
+INSERT INTO tb_client (name, income, cpf, children, birth_date) VALUES ('Jamil Noites', 3278.0, '011.111.222-21', 6, TIMESTAMP WITH TIME ZONE '1999-11-15T00:12:11.12345Z');
+INSERT INTO tb_client (name, income, cpf, children, birth_date) VALUES ('Demilson Souza', 2200.0, '012.111.222-21', 0, TIMESTAMP WITH TIME ZONE '1997-11-16T00:11:13.12345Z');
