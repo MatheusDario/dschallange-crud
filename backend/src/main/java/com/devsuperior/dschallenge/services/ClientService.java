@@ -1,12 +1,12 @@
 package com.devsuperior.dschallenge.services;
 
-import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -22,9 +22,9 @@ public class ClientService {
 	private ClientRepository repository;
 
 	@Transactional(readOnly = true)
-	public List<ClientDTO> findAll() {
-		List<Client> list = repository.findAll();
-		return list.stream().map(cls -> new ClientDTO(cls)).collect(Collectors.toList());
+	public Page<ClientDTO> findAllPaged(PageRequest pageRequest) {
+		Page<Client> list = repository.findAll(pageRequest);
+		return list.map(cls -> new ClientDTO(cls));
 	}
 
 	@Transactional(readOnly = true)
@@ -59,10 +59,10 @@ public class ClientService {
 		try {
 			repository.deleteById(id);
 		} catch (EmptyResultDataAccessException e) {
-            throw new ResouceNotFoundException("Id not found " + id);
-        } catch (DataIntegrityViolationException e) {
-            throw new DataBaseException("Integrity violation");
-        }
+			throw new ResouceNotFoundException("Id not found " + id);
+		} catch (DataIntegrityViolationException e) {
+			throw new DataBaseException("Integrity violation");
+		}
 	}
 
 	private void copyToEntity(ClientDTO dto, Client entity) {
